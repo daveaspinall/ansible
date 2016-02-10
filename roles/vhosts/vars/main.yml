@@ -1,0 +1,5 @@
+---
+enabledSites:
+disabledSites:
+  - example.com.conf
+  - daveaspinall.me.conf

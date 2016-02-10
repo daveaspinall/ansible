@@ -1,0 +1,19 @@
+---
+  - name: Add nginx repository
+    apt_repository: repo='ppa:nginx/stable'
+
+  - name: Install nginx packages
+    apt: pkg={{item}} state=installed
+    with_items:
+         - nginx
+         - nginx-common
+         - nginx-full
+
+  - name: Copy nginx config
+    copy: src=roles/nginx_install/files/nginx.conf dest=/etc/nginx/nginx.conf mode=0644
+
+  - name: Create logs directory
+    file: path=/usr/share/nginx/logs state=directory
+
+  - name: Create error log
+    file: path=/usr/share/nginx/logs/error.log state=touch mode=0775

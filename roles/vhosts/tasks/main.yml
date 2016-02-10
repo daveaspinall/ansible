@@ -1,0 +1,8 @@
+---
+- name: Adding sites
+  copy: "src=sites/{{ item }} dest=/etc/nginx/sites-enabled/{{ item }}"
+  with_items:
+    - "{{ enabledSites }}"
+
+- name: Restart nginx
+  service: name=nginx state=restarted

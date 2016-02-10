@@ -1,0 +1,20 @@
+---
+  - name: Set timezone to London
+    copy: content='Europe/London'
+          dest=/etc/timezone
+          owner=root
+          group=root
+          mode=0644
+          backup=yes
+    notify: Update timezone
+
+  - name: Install basic packages
+    apt: pkg={{item}} state=installed update_cache=yes
+    with_items:
+         - git
+         - zip
+         - unzip
+         - htop
+         - fail2ban
+         - software-properties-common
+         - ntp

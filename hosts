@@ -1,0 +1,8 @@
+[google-webservers]
+104.155.2.159
+
+[webservers:children]
+google-webservers
+
+[webservers:vars]
+ansible_ssh_user=daveaasp
