@@ -1,5 +1,5 @@
 ---
-- name: configure and deploy webservers
+- name: Configure and deploy webservers
   hosts: webservers
   become: yes
   become_method: sudo
