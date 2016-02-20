@@ -1,6 +1,7 @@
 ---
 enabledSites:
   - daveaspinall.me.conf
+  - daveaspinall.com.conf
   - catherineanddave.wedding.conf
 disabledSites:
   - example.com.conf
