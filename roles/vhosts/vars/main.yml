@@ -1,6 +1,7 @@
 ---
 enabledSites:
   - daveaspinall.me.conf
+  - code-task.daveaspinall.me.conf
   - daveaspinall.com.conf
   - catherineanddave.wedding.conf
 disabledSites:
