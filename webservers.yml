@@ -4,7 +4,7 @@
   become: yes
   become_method: sudo
   roles:
-    # - common
-    # - nginx_install
-    # - php_install
+    - common
+    - nginx_install
+    - php_install
     - vhosts
